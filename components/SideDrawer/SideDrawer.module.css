@@ -1,0 +1,63 @@
+.button {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 100;
+}
+
+.container {
+    position: fixed;
+    width: 30%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    /* background-color: black; */
+    z-index: 1000;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.containerClose {
+    transform: translate(100%, 0);
+}
+
+.drawer {
+    height: 100%;
+    border-radius: 0.4em;
+    background: black;
+    /* margin: 0.4em; */
+    padding: 0.4em;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    z-index: 10;
+}
+
+@media (max-width: 900px) {}
+
+@media (max-width: 450px) {
+    .container {
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        height: calc(100% - 62px);
+        width: 100%;
+    }
+
+    .containerClosed {
+        transform: translate(0, 120%);
+    }
+
+    /* .drawer {
+        margin: 0;
+        padding: 0.5em;
+    } */
+}
