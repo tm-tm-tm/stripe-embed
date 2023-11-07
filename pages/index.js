@@ -1,4 +1,4 @@
-import { EmbedCheckout } from '@/components/Checkout/EmbedCheckout'
+import EmbedCheckout from '@/components/Checkout/EmbedCheckout'
 import SideDrawer from '@/components/SideDrawer/SideDrawer'
 import styles from '@/styles/Home.module.css'
 
@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <main className={styles.main}>
         <SideDrawer>
-          <EmbedCheckout />
+          <EmbedCheckout/>
         </SideDrawer>
       </main>
     </>

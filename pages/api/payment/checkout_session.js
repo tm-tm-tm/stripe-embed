@@ -4,6 +4,7 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
             const session = await stripe.checkout.sessions.create({
+                mode: 'payment',
                 ui_mode: 'embedded',
                 // billing_address_collection: 'auto',
                 shipping_address_collection: {
@@ -15,8 +16,10 @@ export default async function handler(req, res) {
                         quantity: 1,
                     },
                 ],
-                mode: 'payment',
                 return_url: `${req.headers.origin}/order/return?session_id={CHECKOUT_SESSION_ID}`,
+                invoice_creation: {
+                    enabled: true,
+                }
             });
 
             res.send({ clientSecret: session.client_secret });
