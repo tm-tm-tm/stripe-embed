@@ -40,7 +40,9 @@ export default function Return() {
                         </p>
                     </section>
 
-                    <Link href={'/'} >
+                    <Link
+                        ref={'/'}
+                    >
                         Return to Home Page
                     </Link>
                 </main>
