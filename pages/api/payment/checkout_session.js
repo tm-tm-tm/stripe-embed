@@ -30,7 +30,7 @@ export default async function handler(req, res) {
                 payment_method_types: ['card', 'link'],
                 line_items: [
                     {
-                        price: 'price_1Nz8hqKyTx6KPkBzyGIXHfnv',
+                        price: 'price_1Nz86pKyTx6KPkBzSnzLxIyn',
                         quantity: 1,
                         adjustable_quantity: {
                             enabled: true,
