@@ -27,10 +27,13 @@ export default async function handler(req, res) {
                 mode: 'payment',
                 ui_mode: 'embedded',
                 submit_type: 'pay',
-                payment_method_types: ['card', 'link'],
+                payment_method_types: ['card', 'link', 'afterpay_clearpay'],
                 line_items: [
                     {
+                        // Live Product
                         price: 'price_1S0cRiKyTx6KPkBz2oUgNrEw',
+                        // // Test product
+                        // price: 'price_1Nz8hqKyTx6KPkBzyGIXHfnv',
                         quantity: 1,
                         adjustable_quantity: {
                             enabled: true,
@@ -46,7 +49,7 @@ export default async function handler(req, res) {
                     allowed_countries: ['AU'],
                 },
                 payment_intent_data: {
-                    capture_method: 'manual',
+                    capture_method: 'automatic',
                 },
                 customer_creation: 'always',
                 // consent_collection: {
