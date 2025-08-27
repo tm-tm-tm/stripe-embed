@@ -6,8 +6,6 @@ import {
   EmbeddedCheckout
 } from '@stripe/react-stripe-js';
 
-// const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
-
 export default function EmbedCheckout() {
   const [clientSecret, setClientSecret] = useState('');
 
@@ -24,7 +22,7 @@ export default function EmbedCheckout() {
       {clientSecret && (
         <EmbeddedCheckoutProvider
           stripe={stripePromise}
-          options={{clientSecret}}
+          options={{ clientSecret }}
         >
           <EmbeddedCheckout />
         </EmbeddedCheckoutProvider>
@@ -32,3 +30,5 @@ export default function EmbedCheckout() {
     </div>
   )
 }
+
+
